@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Vibrator</string>
+    <string name="pulse">Pulse Mode</string>
+    <string name="settings">Settings:</string>
+    <string name="amplitude_0">Amplitude: 0</string>
+    <string name="delay_time_ms">Delay Time(ms):</string>
+</resources>

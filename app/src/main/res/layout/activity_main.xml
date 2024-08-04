@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.codevblocks.android.knob.Knob
+        android:id="@+id/knob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/knob_background"
+        app:debug="false"
+        app:debug_drawBounds="false"
+        app:debug_drawTouchArea="false"
+
+        app:debug_drawTouchRadius="false"
+
+        app:debug_drawTrack="false"
+        app:fillColor="@android:color/transparent"
+        app:fillStartAngle="0"
+
+        app:fillSweepAngle="360"
+        app:knobSize="250dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.206"
+        app:maxProgress="100"
+        app:progress="0"
+        app:progressMode="continuous"
+        app:progressStartAngle="135"
+        app:progressStrokeCap="butt"
+
+        app:progressStrokeColor="#D06489"
+        app:progressStrokeOffset="-14dp"
+        app:progressStrokeWidth="20dp"
+        app:progressSweepAngle="270"
+        app:stepAnchorX="50%"
+
+        app:stepAnchorY="0%"
+        app:stepCount="10"
+        app:stepDrawable="@drawable/knob_step"
+        app:stepOffset="-4dp"
+        app:substepAnchorX="50%"
+
+        app:substepAnchorY="0%"
+        app:substepCount="225"
+        app:substepDrawable="@drawable/knob_substep"
+        app:substepOffset="-4dp"
+        app:thumbAnchorX="50%"
+
+        app:thumbAnchorY="0%"
+        app:thumbDrawable="@drawable/knob_thumb"
+
+        app:thumbOffset="-4dp"
+        app:thumbRotation="true"
+        app:touchOffset="-10dp"
+        app:touchThreshold="48dp"
+        app:trackStrokeCap="butt"
+
+        app:trackStrokeColor="#18FFFFFF"
+        app:trackStrokeOffset="-4dp"
+        app:trackStrokeWidth="38dp" />
+
+    <TextView
+        android:id="@+id/amplitude"
+        android:layout_width="134dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="178dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="175dp"
+        android:layout_marginBottom="211dp"
+        android:text="@string/amplitude_0"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.518"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/knob"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Switch
+        android:id="@+id/pulseSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="21dp"
+        android:defaultFocusHighlightEnabled="true"
+        android:focusedByDefault="true"
+        android:checked="false"
+        android:text="@string/pulse"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textSettings"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/textSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="259dp"
+        android:text="@string/settings"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amplitude" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="292dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/radio100"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:defaultFocusHighlightEnabled="true"
+            android:focusedByDefault="true"
+            android:soundEffectsEnabled="true"
+            android:text="100"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radio200"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:soundEffectsEnabled="true"
+            android:text="200"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radio300"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:soundEffectsEnabled="true"
+            android:text="300"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radio500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:soundEffectsEnabled="true"
+            android:text="500"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/radio1000"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:soundEffectsEnabled="true"
+            android:text="1000"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="250dp"
+        android:text="@string/delay_time_ms"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pulseSwitch" />
+    >
+</androidx.constraintlayout.widget.ConstraintLayout>
